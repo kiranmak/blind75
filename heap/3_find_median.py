@@ -36,25 +36,77 @@ you optimize your solution?
 If 99% of all integer numbers from the stream are in the range [0, 100], 
 how would you optimize your solution?
 '''
+from heapq import *
+import sys
+
 class MedianFinder:
-
     def __init__(self):
+        self.small = []  # the smaller half of the list, max heap (invert min-heap)
+        self.large = []  # the larger half of the list, min heap
+
+    def addNum(self, num):
+        if len(self.small) == len(self.large):
+            val = heappushpop(self.small, -num)
+            heappush(self.large, -val)
+        else:
+            val = heappushpop(self.large, num)
+            heappush(self.small, -val)
+
+    def findMedian(self):
+        if len(self.small) == len(self.large):
+            return float(self.large[0] - self.small[0]) / 2.0
+        else:
+            return float(self.large[0])
+
         
+input = [[],[12],[],[10],[],[13],[],[11],[],[5],[],[15],[],[1],[],[11],[],[6],[],[17],[],[14],[],[8],[],[17],[],[6],[],[4],[],[16],[],[8],[],[10],[],[2],[],[12],[],[0],[]]
+actions = ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 
-    def addNum(self, num: int) -> None:
-        
+print("input", input[0])
+mf = MedianFinder()
+for i in range(len(actions[1:])):
+    if actions[i] == "addNum":
+        mf.addNum(input[i][0])
+    elif actions[i] == "findMedian":
+        print("left=", mf.small, "right=", mf.large)
+        ans = mf.findMedian()
+        print("findMedian", ans)
+    continue
+    
+'''
+Output
+[null,null,12.00000,null,11.00000,null,12.00000,null,11.00000,null,11.00000,null,11.50000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,11.00000,null,10.50000,null,10.00000,null,10.50000,null,10.00000]
+Expected
+[null,null,12.00000,
+      null,11.00000,
+      null,12.00000,
+      null,11.50000,
+      
+      null,11.00000,
+      null,11.50000,
+      null,11.00000,
+      null,11.00000,
+      
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,11.00000,
+      null,10.50000,
+      null,10.00000,
+      null,10.50000,
+      null,10.00000]
 
-    def findMedian(self) -> float:
-        
-
-
-# Your MedianFinder object will be instantiated and called as such:
-# obj = MedianFinder()
-# obj.addNum(num)
-# param_2 = obj.findMedian()
-medianFinder = new MedianFinder()
-medianFinder.addNum(1);    // arr = [1]
-medianFinder.addNum(2);    // arr = [1, 2]
-medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)
-medianFinder.addNum(3);    // arr[1, 2, 3]
-medianFinder.findMedian(); // return 2.0
+mf = MedianFinder()
+medianFinder.addNum(1) # arr[1]
+medianFinder.addNum(2)       #arr = [1, 2]
+ans = medianFinder.findMedian()    #return 1.5 (i.e., (1 + 2) / 2)
+print("ans", ans)
+medianFinder.addNum(3)       #arr[1, 2, 3]
+ans = medianFinder.findMedian()    #return 2.0
+print("ans", ans)
+'''
