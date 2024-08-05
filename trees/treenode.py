@@ -59,6 +59,19 @@ def makeTree(arr):
             n += 1
     return root
 
+def parent(root, val):
+    if not root:
+        return  None
+    if root.val == val:
+        return root
+    
+    left = root.left
+    if left.val == val:
+        return root
+    if left.val > val: 
+        return parent(root.left, val)
+    return parent(root.right, val)
+
 def makeArray(root):
     if not root:
         return None
@@ -96,3 +109,11 @@ if __name__ == '__main__':
         print("Tree for", arr)
         root.print()
         print("----------")
+
+    input, val = [3,9,20,None,None,15,7], 15
+    root = makeTree(input)
+    node = parent(root, val)
+    if node:
+        print("parent of ", val, "is", node.val)
+    else:
+        print("None")

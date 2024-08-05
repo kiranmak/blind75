@@ -1,6 +1,24 @@
+<!-- vscode-markdown-toc -->
+* 1. [Array](#Array)
+* 2. [Matrix](#Matrix)
+* 3. [String](#String)
+* 4. [Linked List](#LinkedList)
+* 5. [Tree](#Tree)
+* 6. [Heap](#Heap)
+* 7. [Graph](#Graph)
+* 8. [Dynamic Programming](#DynamicProgramming)
+* 9. [Interval](#Interval)
+* 10. [Binary](#Binary)
+* 11. [Important Link:](#ImportantLink:)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
 # Array
-## Array
+##  1. <a name='Array'></a>Array
 
 - [1] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [2] [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
@@ -142,7 +160,7 @@ the container can contain is 49.
 ```
 ---
 
-## Matrix
+##  2. <a name='Matrix'></a>Matrix
 
 - [ ] [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
 - [ ] [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
@@ -191,7 +209,7 @@ Output: true
 
 ---
 
-## String
+##  3. <a name='String'></a>String
 
 - [ ] [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [ ] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
@@ -325,7 +343,7 @@ Explanation: One possible encode method is: “we:;say:;:::;yes”
 
 ---
 
-## Linked List
+##  4. <a name='LinkedList'></a>Linked List
 
 - [x] [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
@@ -403,13 +421,13 @@ Output: [1,4,2,3]
 
 ---
 
-## Tree
+##  5. <a name='Tree'></a>Tree
 - [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [Same Tree](https://leetcode.com/problems/same-tree/)
 - [x] [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 - [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-- [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 - [x] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 - [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 - [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
@@ -569,7 +587,7 @@ Output: ["eat","oath"]
 
 
 ---
-## Heap
+##  6. <a name='Heap'></a>Heap
 
 - [ ] [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 - [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
@@ -625,7 +643,7 @@ medianFinder.findMedian(); // return 2.0
 
 ---
 
-## Graph
+##  7. <a name='Graph'></a>Graph
 
 - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
 - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/)
@@ -769,7 +787,7 @@ Output: 2
 ```
 
 ---
-## Dynamic Programming
+##  8. <a name='DynamicProgramming'></a>Dynamic Programming
 
 - [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 - [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
@@ -936,7 +954,7 @@ Constraints:
 
 ----
 
-## Interval
+##  9. <a name='Interval'></a>Interval
 
 - [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
 - [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
@@ -996,7 +1014,7 @@ Input: [[7,10],[2,4]]
 Output: 1
 
 ---
-## Binary
+##  10. <a name='Binary'></a>Binary
 
 - [ ] [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
 - [ ] [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
@@ -1077,5 +1095,5 @@ integer 4294967293, so return 3221225471 whose binary
 representation is 10111111111111111111111111111111.
 
 
-## Important Link:
+##  11. <a name='ImportantLink:'></a>Important Link:
 [14 Patterns to Ace Any Coding Interview Question](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
